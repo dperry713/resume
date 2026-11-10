@@ -1,54 +1,37 @@
-# Dustin Perry — Résumé site
+# Dustin Perry — Résumé
 
-Static, dependency-free résumé page: one `index.html`, one stylesheet, one small script.
-It is designed to be served from GitHub Pages at the repository root.
+A responsive, accessible résumé site for software engineering and cybersecurity roles. Built as a static site with no build step or runtime dependencies.
 
-## Files
+## Site structure
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The résumé: summary, skills, experience, projects, education, Person JSON-LD |
-| `styles.css` | Design tokens, light/dark themes, responsive layout, print stylesheet |
-| `app.js` | Theme toggle, sticky-header state, scroll-spy nav, print button |
-| `favicon.svg` | Monogram favicon |
-| `Dustin_Perry_Resume.pdf` | Downloadable source résumé |
-| `.nojekyll` | Tells GitHub Pages to serve files as-is, skipping Jekyll |
+| `index.html` | Resume content, project portfolio, structured Person metadata, and externally hosted credential embeds |
+| `styles.css` | Design tokens, light/dark themes, responsive layout, and print stylesheet |
+| `app.js` | Theme toggle, sticky-header state, scroll-spy navigation, and print action |
+| `favicon.svg` | DP monogram favicon |
+| `Dustin_Perry_Resume.pdf` | Downloadable PDF résumé |
+| `.nojekyll` | Ensures GitHub Pages serves repository assets without Jekyll processing |
 
-## Publish on GitHub Pages
+## Published repository
 
-1. Create an empty public repository, for example `resume`:
+This repository is `dperry713/resume`.
 
-   ```powershell
-   gh repo create <owner>/resume --public --description "Résumé site for Dustin Perry"
-   ```
+- Source: https://github.com/dperry713/resume
+- GitHub Pages URL (when Pages is enabled): https://dperry713.github.io/resume/
 
-2. Push this directory to it:
+To enable or verify deployment, open **Settings → Pages** and configure **Deploy from a branch**, branch `main`, folder `/ (root)`. A successful Pages deployment is required before the public URL is considered live.
 
-   ```powershell
-   git remote add origin https://github.com/<owner>/resume.git
-   git branch -M main
-   git push -u origin main
-   ```
+## Editing
 
-3. Enable Pages from the `main` branch, root folder:
+Update the semantic sections in `index.html`. Preserve the section IDs used by the navigation and scroll-spy behavior: `skills`, `experience`, `projects`, `education`, and `credentials`.
 
-   ```powershell
-   gh api -X POST repos/<owner>/resume/pages -f "source[branch]=main" -f "source[path]=/"
-   ```
+The credential section contains live Credly and Accredible embeds. Keep their badge IDs, source URLs, and embed attributes intact when editing surrounding content. These embeds are externally hosted and may be subject to the providers' availability and privacy settings.
 
-   Or in the browser: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `/ (root)`**.
+## Print and PDF
 
-4. The site appears at `https://<owner>.github.io/resume/` after the first build (usually under a minute).
+Use the **Print** control or the browser's print command, then select **Save as PDF**. The print stylesheet removes navigation and interactive controls and applies a high-contrast document layout. Replace `Dustin_Perry_Resume.pdf` in the repository when publishing a refreshed PDF.
 
-## Editing the content
+## Accessibility and progressive enhancement
 
-All content lives in `index.html`. Keep the section order — summary, skills, experience, projects,
-education — and keep each `id` (`#skills`, `#experience`, `#projects`, `#education`) because the nav
-and the scroll-spy script depend on them. Remember to replace `Dustin_Perry_Resume.pdf` when the PDF
-is updated.
-
-## Print / PDF
-
-The browser's print dialog produces a clean two-page document: navigation, buttons, and decorative
-layers are hidden, colours are forced to black on white, and experience entries are kept whole across
-page breaks. Use **Print → Save as PDF** to regenerate the downloadable PDF.
+The page includes a skip link, semantic landmarks, visible keyboard focus, responsive layouts, reduced-motion support, and theme behavior that degrades gracefully when browser storage or JavaScript is unavailable.
