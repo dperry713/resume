@@ -203,7 +203,7 @@
           <ul class="chips">
             <li>Python</li><li>.NET</li><li>Rust</li><li>TypeScript</li><li>JavaScript</li><li>Node.js</li><li>React.js</li><li>Three.js</li>
             <li>HTML5</li><li>CSS3</li><li>SQL</li><li>GraphQL</li><li>RESTful APIs</li>
-            <li>JSON</li><li>Full-Stack Development</li><li>Backend Systems</li>
+            <li>JSON</li><li>Full-Stack Development</li><li>Backend Systems</li><li>Distributed Systems</li><li>Agentic AI</li><li>Model Context Protocol</li>
             <li>Web Applications</li><li>Responsive Web Design</li>
             <li>Interactive 3D Web Experiences</li>
           </ul>
@@ -212,7 +212,7 @@
           <h3>Platforms &amp; Tools</h3>
           <ul class="chips">
             <li>Git</li><li>GitHub</li><li>Docker</li><li>Linux</li><li>CI/CD</li>
-            <li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>SQLite</li><li>Figma</li>
+            <li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>SQLite</li><li>Redis</li><li>Figma</li>
             <li>Bootstrap</li><li>AWS</li><li>Microsoft Azure</li><li>Google Cloud</li>
             <li>Nessus</li><li>OpenVAS</li><li>Nmap</li><li>Burp Suite</li><li>Splunk</li>
           </ul>
@@ -285,54 +285,84 @@
     <section class="section" id="projects" aria-labelledby="projects-heading">
       <header class="section-header">
         <p class="section-index" aria-hidden="true">03</p>
-        <h2 id="projects-heading">Technical Projects</h2>
+        <h2 id="projects-heading">Selected Engineering Projects</h2>
       </header>
       <div class="project-grid">
+        <article class="card project-card">
+          <p class="project-kicker">AI Runtime · Windows Security · Agent Governance</p>
+          <h3>AI Runtime (AIR)</h3>
+          <p>
+            A Windows-native execution runtime designed to make autonomous agents safer and more
+            controllable. The architecture emphasizes deny-by-default policy enforcement, isolated
+            execution, controlled network egress, secret isolation, and an event-sourced journal for
+            auditability and recovery.
+          </p>
+          <ul class="project-links">
+            <li><a href="https://github.com/dperry713/AIR" target="_blank" rel="noopener noreferrer">Source repository</a></li>
+          </ul>
+          <ul class="chips chips-compact">
+            <li>TypeScript</li><li>Windows</li><li>Policy Enforcement</li><li>Isolation</li><li>Audit Logging</li>
+          </ul>
+        </article>
+        <article class="card project-card">
+          <p class="project-kicker">Agent Memory · Retrieval · Token-Aware Context</p>
+          <h3>Cognitive Memory Database</h3>
+          <p>
+            An agent-oriented memory system exploring semantic page construction, tokenizer-aware
+            context allocation, memory-type routing, and progressive recall. The goal is to retrieve
+            coherent, task-relevant knowledge without loading an agent's entire history into context.
+          </p>
+          <ul class="project-links">
+            <li><a href="https://github.com/dperry713?tab=repositories" target="_blank" rel="noopener noreferrer">Browse project repositories</a></li>
+          </ul>
+          <ul class="chips chips-compact">
+            <li>.NET</li><li>C#</li><li>Semantic Retrieval</li><li>Tokenization</li><li>MCP</li>
+          </ul>
+        </article>
+        <article class="card project-card">
+          <p class="project-kicker">Blockchain Infrastructure · Enterprise APIs</p>
+          <h3>XRPL Platform</h3>
+          <p>
+            Enterprise middleware and API work for the XRP Ledger, with a .NET service architecture
+            covering typed domain models, ledger-client abstractions, payment workflows, tenant-aware
+            APIs, auditability, and webhook integration.
+          </p>
+          <ul class="project-links">
+            <li><a href="https://github.com/dperry713?tab=repositories" target="_blank" rel="noopener noreferrer">Browse project repositories</a></li>
+          </ul>
+          <ul class="chips chips-compact">
+            <li>.NET</li><li>C#</li><li>REST APIs</li><li>PostgreSQL</li><li>XRPL</li>
+          </ul>
+        </article>
         <article class="card project-card">
           <p class="project-kicker">Interactive 3D Web Experience</p>
           <h3>The Advent Piazza</h3>
           <p>
-            A themed interactive 3D web experience built on a Three.js scene with user-facing controls.
-            It demonstrates interactive presentation, state persistence, and a GitHub-based source and
-            deployment workflow for a live portfolio project.
+            An interactive Three.js experience demonstrating browser-based 3D presentation,
+            user-facing controls, responsive interaction, and a GitHub-based source and deployment
+            workflow.
           </p>
           <ul class="project-links">
-            <li>
-              <a href="https://dperry713.github.io/xmas/dist" target="_blank" rel="noopener">
-                Live demo
-                <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"></path></svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/dperry713/xmas" target="_blank" rel="noopener">
-                Source
-                <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"></path></svg>
-              </a>
-            </li>
+            <li><a href="https://dperry713.github.io/xmas/dist" target="_blank" rel="noopener noreferrer">Live demo</a></li>
+            <li><a href="https://github.com/dperry713/xmas" target="_blank" rel="noopener noreferrer">Source repository</a></li>
           </ul>
           <ul class="chips chips-compact">
-            <li>Three.js</li><li>JavaScript</li><li>Responsive Web</li>
+            <li>Three.js</li><li>JavaScript</li><li>WebGL</li><li>Responsive Web</li>
           </ul>
         </article>
         <article class="card project-card">
-          <p class="project-kicker">Full-Stack &amp; Security Coursework</p>
+          <p class="project-kicker">Full-Stack Engineering · Application Security</p>
           <h3>Web Development &amp; Security Projects</h3>
           <p>
-            Web applications built with React.js on the frontend and Python/Node.js backend services,
-            integrating RESTful APIs and GraphQL for application data exchange. Security practices were
-            applied through threat-detection and incident-response coursework, with Figma used for UI/UX
-            prototyping and user-centered interface planning.
+            Full-stack application work spanning React interfaces, Python and Node.js services,
+            RESTful APIs, GraphQL, relational data stores, and security-focused coursework and
+            implementation practices.
           </p>
           <ul class="project-links">
-            <li>
-              <a href="https://github.com/dperry713" target="_blank" rel="noopener">
-                Browse repositories
-                <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"></path></svg>
-              </a>
-            </li>
+            <li><a href="https://github.com/dperry713" target="_blank" rel="noopener noreferrer">Browse GitHub repositories</a></li>
           </ul>
           <ul class="chips chips-compact">
-            <li>React.js</li><li>Python</li><li>Node.js</li><li>GraphQL</li><li>Figma</li>
+            <li>React</li><li>Python</li><li>Node.js</li><li>GraphQL</li><li>Application Security</li>
           </ul>
         </article>
       </div>
